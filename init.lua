@@ -26,7 +26,7 @@ require("lazy").setup({
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		lazy = false, -- Load immediately on startup
+		lazy = true, -- Load immediately on startup
 		config = function()
 			local configs_ok, configs = pcall(require, "nvim-treesitter.configs")
 			if not configs_ok then
